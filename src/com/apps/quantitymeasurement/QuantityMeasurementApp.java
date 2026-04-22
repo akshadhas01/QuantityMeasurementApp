@@ -3,9 +3,15 @@ package com.apps.quantitymeasurement;
 public class QuantityMeasurementApp {
 
     public static void main(String[] args) {
-        Length l1 = new Length(1.0, Length.LengthUnit.FEET);
-        Length l2 = new Length(12.0, Length.LengthUnit.INCHES);
 
-        System.out.println("Are lengths equal? " + l1.equals(l2));
+        System.out.println(
+                new Length(1.0, Length.LengthUnit.YARDS)
+                        .equals(new Length(36.0, Length.LengthUnit.INCHES))
+        );
+
+        System.out.println(
+                new Length(1.0, Length.LengthUnit.CENTIMETERS)
+                        .equals(new Length(0.393701, Length.LengthUnit.INCHES))
+        );
     }
 }
